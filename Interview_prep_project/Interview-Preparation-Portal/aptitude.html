@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Aptitude Practice | Interview Preparation Portal</title>
+
+    <!-- Bootstrap -->
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+    >
+
+    <!-- Bootstrap Icons -->
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"
+        rel="stylesheet"
+    >
+
+    <!-- Custom CSS -->
+    <link
+        rel="stylesheet"
+        href="css/style.css"
+    >
+</head>
+
+
+<body>
+
+
+<!-- ================= NAVBAR ================= -->
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+
+    <div class="container">
+
+        <a
+            class="navbar-brand fw-bold"
+            href="index.html"
+        >
+            <i class="bi bi-mortarboard-fill me-2"></i>
+            Interview Prep
+        </a>
+
+
+        <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+        >
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+
+        <div
+            class="collapse navbar-collapse"
+            id="navbarNav"
+        >
+
+            <ul class="navbar-nav ms-auto">
+
+                <li class="nav-item">
+                    <a
+                        class="nav-link"
+                        href="index.html"
+                    >
+                        Home
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a
+                        class="nav-link active"
+                        href="aptitude.html"
+                    >
+                        Aptitude
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a
+                        class="nav-link"
+                        href="dashboard.html"
+                    >
+                        Dashboard
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a
+                        class="nav-link"
+                        href="login.html"
+                    >
+                        Login
+                    </a>
+                </li>
+
+            </ul>
+
+        </div>
+
+    </div>
+
+</nav>
+
+
+
+<!-- ================= HEADER ================= -->
+
+<section class="py-5 bg-light">
+
+    <div class="container text-center">
+
+        <h1 class="fw-bold">
+            Improve Your Aptitude Skills 🎯
+        </h1>
+
+        <p class="text-secondary mt-3">
+            Practice aptitude questions and improve your
+            interview preparation.
+        </p>
+
+    </div>
+
+</section>
+
+
+
+<!-- ================= FILTERS ================= -->
+
+<section class="py-4">
+
+    <div class="container">
+
+        <div class="row g-3">
+
+            <div class="col-md-4">
+
+                <label
+                    for="searchTopic"
+                    class="form-label fw-semibold"
+                >
+                    Search Topic
+                </label>
+
+                <input
+                    type="text"
+                    id="searchTopic"
+                    class="form-control"
+                    placeholder="Search topics..."
+                >
+
+            </div>
+
+
+            <div class="col-md-3">
+
+                <label
+                    for="difficultyFilter"
+                    class="form-label fw-semibold"
+                >
+                    Difficulty
+                </label>
+
+                <select
+                    id="difficultyFilter"
+                    class="form-select"
+                >
+
+                    <option value="all">
+                        All Levels
+                    </option>
+
+                    <option value="easy">
+                        Easy
+                    </option>
+
+                    <option value="medium">
+                        Medium
+                    </option>
+
+                    <option value="hard">
+                        Hard
+                    </option>
+
+                </select>
+
+            </div>
+
+
+            <div class="col-md-3">
+
+                <label
+                    for="questionCount"
+                    class="form-label fw-semibold"
+                >
+                    Questions
+                </label>
+
+                <select
+                    id="questionCount"
+                    class="form-select"
+                >
+
+                    <option value="10">
+                        10 Questions
+                    </option>
+
+                    <option value="5">
+                        5 Questions
+                    </option>
+
+                </select>
+
+            </div>
+
+
+            <div class="col-md-2 d-flex align-items-end">
+
+                <button
+                    id="resetFilters"
+                    type="button"
+                    class="btn btn-outline-secondary w-100"
+                >
+                    <i class="bi bi-arrow-clockwise me-1"></i>
+                    Reset
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- ================= CATEGORIES ================= -->
+
+<section class="py-5">
+
+    <div class="container">
+
+        <div class="row g-4">
+
+
+            <!-- QUANTITATIVE -->
+
+            <div class="col-md-4">
+
+                <div class="card h-100 shadow-sm border-0">
+
+                    <div class="card-body text-center p-4">
+
+                        <div class="mb-3">
+
+                            <i
+                                class="bi bi-calculator-fill fs-1 text-primary"
+                            ></i>
+
+                        </div>
+
+
+                        <h4 class="fw-bold">
+                            Quantitative Aptitude
+                        </h4>
+
+
+                        <p class="text-secondary">
+                            Practice percentages, ratios,
+                            averages, profit and loss,
+                            numbers and more.
+                        </p>
+
+
+                        <button
+                            type="button"
+                            class="btn btn-primary"
+                            onclick="startPractice('quantitative')"
+                        >
+                            Start Practice
+
+                            <i
+                                class="bi bi-arrow-right ms-1"
+                            ></i>
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- LOGICAL -->
+
+            <div class="col-md-4">
+
+                <div class="card h-100 shadow-sm border-0">
+
+                    <div class="card-body text-center p-4">
+
+                        <div class="mb-3">
+
+                            <i
+                                class="bi bi-puzzle-fill fs-1 text-success"
+                            ></i>
+
+                        </div>
+
+
+                        <h4 class="fw-bold">
+                            Logical Reasoning
+                        </h4>
+
+
+                        <p class="text-secondary">
+                            Improve your logical thinking
+                            with sequences, coding and
+                            reasoning questions.
+                        </p>
+
+
+                        <button
+                            type="button"
+                            class="btn btn-success"
+                            onclick="startPractice('logical')"
+                        >
+                            Start Practice
+
+                            <i
+                                class="bi bi-arrow-right ms-1"
+                            ></i>
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- VERBAL -->
+
+            <div class="col-md-4">
+
+                <div class="card h-100 shadow-sm border-0">
+
+                    <div class="card-body text-center p-4">
+
+                        <div class="mb-3">
+
+                            <i
+                                class="bi bi-book-fill fs-1 text-warning"
+                            ></i>
+
+                        </div>
+
+
+                        <h4 class="fw-bold">
+                            Verbal Ability
+                        </h4>
+
+
+                        <p class="text-secondary">
+                            Improve vocabulary, grammar,
+                            synonyms, antonyms and sentence
+                            skills.
+                        </p>
+
+
+                        <button
+                            type="button"
+                            class="btn btn-warning"
+                            onclick="startPractice('verbal')"
+                        >
+                            Start Practice
+
+                            <i
+                                class="bi bi-arrow-right ms-1"
+                            ></i>
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- ================= PRACTICE AREA ================= -->
+
+<section class="py-5">
+
+    <div class="container">
+
+        <div class="card shadow-sm border-0">
+
+            <div
+                id="questionArea"
+                class="card-body text-center py-5"
+            >
+
+                <i
+                    class="bi bi-calculator fs-1 text-primary"
+                ></i>
+
+
+                <h3 class="fw-bold mt-3">
+                    Ready to Practice?
+                </h3>
+
+
+                <p class="text-secondary">
+                    Choose a category above and start
+                    solving questions.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer class="bg-dark text-white py-4">
+
+    <div class="container text-center">
+
+        <p class="mb-0">
+            © 2026 Interview Preparation Portal
+        </p>
+
+    </div>
+
+</footer>
+
+
+
+<!-- Bootstrap JS -->
+
+<script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+></script>
+
+
+<!-- Aptitude JavaScript -->
+
+<script
+    type="module"
+    src="js/aptitude.js"
+></script>
+
+
+</body>
+
+</html>
